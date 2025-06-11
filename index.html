@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Your Name - Portfolio</title>
+
+  <!-- ✅ Typed.js CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to right, #f2f2f2, #e0f7fa);
+      color: #333;
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    header {
+      background: #00bcd4;
+      color: white;
+      padding: 2rem 1rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+
+    .intro-text {
+      flex: 1;
+      padding: 10px;
+    }
+
+    .intro-text h1 {
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .typed-text {
+      font-size: 1.2rem;
+      font-weight: bold;
+      color: #fff;
+    }
+
+    .photo {
+      padding: 10px;
+      text-align: center;
+    }
+
+    .photo img {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      border: 5px solid white;
+      object-fit: cover;
+    }
+
+    main {
+      max-width: 1000px;
+      margin: auto;
+      padding: 20px;
+      animation: fadeInUp 1.2s ease-in-out;
+    }
+
+    section {
+      margin-bottom: 40px;
+      background: white;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.1);
+      opacity: 0;
+      transform: translateY(30px);
+      animation: sectionFade 0.8s ease forwards;
+    }
+
+    section:nth-of-type(1) { animation-delay: 0.1s; }
+    section:nth-of-type(2) { animation-delay: 0.2s; }
+    section:nth-of-type(3) { animation-delay: 0.3s; }
+    section:nth-of-type(4) { animation-delay: 0.4s; }
+    section:nth-of-type(5) { animation-delay: 0.5s; }
+    section:nth-of-type(6) { animation-delay: 0.6s; }
+
+    h2 {
+      color: #00bcd4;
+      margin-bottom: 10px;
+    }
+
+    ul, ol {
+      margin-left: 20px;
+    }
+
+    a {
+      color: #0288d1;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .projects, .coding-profiles {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .card {
+      background: #e0f7fa;
+      padding: 15px;
+      border-radius: 10px;
+      flex: 1 1 calc(50% - 20px);
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease, background 0.3s;
+    }
+
+    .card:hover {
+      transform: scale(1.05);
+      background: #b2ebf2;
+    }
+
+    .card h3 {
+      color: #00796b;
+      margin-bottom: 10px;
+    }
+
+    .resume-button {
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: #00bcd4;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+      font-weight: bold;
+      transition: background 0.3s ease;
+      margin-top: 10px;
+    }
+
+    .resume-button:hover {
+      background-color: #0288d1;
+    }
+
+    footer {
+      background: #00bcd4;
+      color: white;
+      text-align: center;
+      padding: 1rem 0;
+      margin-top: 20px;
+    }
+
+    /* Animations */
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(40px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes sectionFade {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      header {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .intro-text, .photo {
+        flex: 1 1 100%;
+      }
+
+      .projects, .coding-profiles {
+        flex-direction: column;
+      }
+
+      .card {
+        flex: 1 1 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="intro-text">
+      <h1>INDRA MOULI KAVITI</h1>
+      <span class="typed-text" id="typed"></span>
+    </div>
+    <div class="photo">
+      <img src="my picture.jpg" alt="Profile Photo" />
+    </div>
+  </header>
+
+  <main>
+
+    <!-- 📄 Resume Section -->
+    <section>
+      <h2>Resume</h2>
+      <p>You can view or download my resume to know more about my education, experience, and skills.</p>
+      <a class="resume-button" href="MouliResume.pdf" target="_blank">📄 View Resume</a>
+    </section>
+
+    <section>
+      <h2>About Me</h2>
+      <p>
+        I'm a passionate web developer eager to build responsive, user-friendly web apps.
+        I enjoy solving real-world problems with code and love to explore new tech tools.
+      </p>
+    </section>
+
+    <section>
+      <h2>Skills</h2>
+      <ul>
+        <li>HTML5, CSS3</li>
+        <li>JavaScript & React</li>
+        <li>Responsive Web Design</li>
+      </ul>
+
+      <h2>Interests</h2>
+      <ol>
+        <li>UI/UX Design</li>
+        <li>Open Source Projects</li>
+        <li>Learning New Technologies</li>
+      </ol>
+    </section>
+
+    <section>
+      <h2>Projects</h2>
+      <div class="projects">
+        <div class="card">
+          <h3>Portfolio Website</h3>
+          <p>A personal site to showcase my projects and resume, built with pure HTML/CSS.</p>
+          <a href="#">View Project</a>
+        </div>
+        <div class="card">
+          <h3>Weather App</h3>
+          <p>Weather dashboard using the OpenWeather API and JavaScript.</p>
+          <a href="https://indra2539mouli.github.io/weatherApp/">View Project</a>
+        </div>
+        <div class="card">
+          <h3>Task Manager</h3>
+          <p>To-do list app using local storage and responsive design.</p>
+          <a href="https://indra2539mouli.github.io/ToDoList/">View Project</a>
+        </div>
+        <div class="card">
+          <h3>Blog Template</h3>
+          <p>Clean, responsive layout for a modern blog using CSS Grid.</p>
+          <a href="#">View Project</a>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Coding Profiles</h2>
+      <div class="coding-profiles">
+        <div class="card">
+          <h3>CodeChef</h3>
+          <p>Participating in competitive programming contests and improving problem-solving skills.</p>
+          <a href="https://www.codechef.com/users/indramouli9" target="_blank">View CodeChef Profile</a>
+        </div>
+        <div class="card">
+          <h3>LeetCode</h3>
+          <p>Practicing coding problems in data structures and algorithms for technical interviews.</p>
+          <a href="https://leetcode.com/Mouli2539" target="_blank">View LeetCode Profile</a>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Contact Information</h2>
+      <p>Email: <a href="mailto:mouliindra58.email@example.com">mouliindra58.email@example.com</a></p>
+      <p>
+        <a href="https://www.linkedin.com/in/indra-mouli-4584092b7" target="_blank">LinkedIn</a> |
+        <a href="https://github.com/INDRA2539MOULI/" target="_blank">GitHub</a>
+      </p>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Your Name. All rights reserved.</p>
+  </footer>
+
+  <!-- ✅ Typed.js init -->
+  <script>
+    var typed = new Typed("#typed", {
+      strings: ["Web Developer", "Tech Enthusiast", "Problem Solver", "Creative Coder"],
+      typeSpeed: 60,
+      backSpeed: 40,
+      loop: true
+    });
+  </script>
+
+</body>
+</html>
